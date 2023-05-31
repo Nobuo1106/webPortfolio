@@ -13,7 +13,11 @@ $('body').scrollspy({
     target: '.navbar-fixed-top'
 })
 
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
+$(document).ready(function() {
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function() {
+        if($('#bs-example-navbar-collapse-1').hasClass('in')) {
+            $('#bs-example-navbar-collapse-1').removeClass('in');
+        }
+    });
 });
